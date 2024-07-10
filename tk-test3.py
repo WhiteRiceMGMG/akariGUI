@@ -10,7 +10,7 @@ root.geometry("300x200")
 def button_click():
     #tokenとenrtyを入手．
     token = entry_token.get()
-    message = entry_text.get()
+    message = entry_text.get("1.0", tk.END).strip()
     line_header  = {
     'Content-Type' : 'application/x-www-form-urlencoded',
     'Authorization': 'Bearer' + ' ' + token }
